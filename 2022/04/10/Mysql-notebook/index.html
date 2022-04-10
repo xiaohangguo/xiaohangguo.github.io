@@ -20,30 +20,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hang">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1.1数据库系统概述1.1.1数据描述事物的符号 1.1.2数据库 1.长期储存在计算机内 2.有组织的 3.可共享的 4.大量的  数据的集合 1.较小的冗余度 2.较高的数据独立性（物理独立、逻辑独立） 3.易扩展性  1.1.3数据库管理系统（DBMS）功能：P6 1.数据定义功能(DDL) 2.数据操纵功能(DML) “增删改查’’ 3.数据控制 (DCL)功能&#x2F;&#x2F;前三">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mysql notebook">
+<meta property="og:url" content="http://example.com/2022/04/10/Mysql-notebook/index.html">
 <meta property="og:site_name" content="hang">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="1.1数据库系统概述1.1.1数据描述事物的符号 1.1.2数据库 1.长期储存在计算机内 2.有组织的 3.可共享的 4.大量的  数据的集合 1.较小的冗余度 2.较高的数据独立性（物理独立、逻辑独立） 3.易扩展性  1.1.3数据库管理系统（DBMS）功能：P6 1.数据定义功能(DDL) 2.数据操纵功能(DML) “增删改查’’ 3.数据控制 (DCL)功能&#x2F;&#x2F;前三">
 <meta property="og:locale">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220227193839810.png">
+<meta property="og:image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2F20210425091641169.png%3Fx-oss-process%3Dimage%2Fwatermark%2Ctype_ZmFuZ3poZW5naGVpdGk%2Cshadow_10%2Ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lJTlpIRV9f%2Csize_16%2Ccolor_FFFFFF%2Ct_70&refer=http%3A%2F%2Fimg-blog.csdnimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648708245&t=7b31d49bc98be65a794de1b6d8a34b09">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220322142925814.png">
+<meta property="article:published_time" content="2022-04-10T14:58:14.000Z">
+<meta property="article:modified_time" content="2022-04-10T14:59:09.052Z">
 <meta property="article:author" content="Lv Shuhang">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220227193839810.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/04/10/Mysql-notebook/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'cn'
   };
 </script>
 
-  <title>hang</title>
+  <title>Mysql notebook | hang</title>
   
 
 
@@ -143,114 +149,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/10/Matlab-notebook/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Lv Shuhang">
-      <meta itemprop="description" content="个人博客">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hang">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/10/Matlab-notebook/" class="post-title-link" itemprop="url">Matlab notebook</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-04-10 22:59:46 / Modified: 23:00:02" itemprop="dateCreated datePublished" datetime="2022-04-10T22:59:46+08:00">2022-04-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A =[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> ; <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> ; <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> ]</span><br><span class="line"></span><br><span class="line">B = A&#x27;   //矩阵的转置</span><br><span class="line"></span><br><span class="line">C = A(:) //</span><br><span class="line"></span><br><span class="line">D = inv(A) //矩阵的逆 </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>定义与构造</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B = <span class="number">1</span>:<span class="number">2</span>:<span class="number">9</span></span><br><span class="line">C = <span class="built_in">repmat</span>(B,<span class="number">3</span>,<span class="number">1</span>)</span><br><span class="line">D = <span class="built_in">ones</span>(<span class="number">2</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>三维矩阵创建E &#x3D; zeors(:,:,3)</p>
-<h3 id="随机数-rand、randi、randn"><a href="#随机数-rand、randi、randn" class="headerlink" title="随机数 rand、randi、randn"></a>随机数 rand、randi、randn</h3><p>1.rand  （0~1）</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rand</span>(m,n)</span><br></pre></td></tr></table></figure>
-
-<p> 2.randn生成标准正态分布的伪随机数(均值为0，方差为1)</p>
-<p>3.randi生成均匀分布的伪随机整数</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">randi([imin,imax],m,n)//在开区间生成mXn型随机矩阵</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="元胞数组"><a href="#元胞数组" class="headerlink" title="元胞数组"></a>元胞数组</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = cell(<span class="number">1</span>,<span class="number">6</span>) </span><br><span class="line">A&#123;<span class="number">2</span>&#125;=<span class="built_in">eye</span>(<span class="number">3</span>) <span class="comment">%对角线数值为1的单位矩阵</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; book = struct(<span class="string">&#x27;name&#x27;</span>,&#123;<span class="string">&#x27;《法制的圆》&#x27;</span>,<span class="string">&#x27;《今天中午吃什么》&#x27;</span>,<span class="string">&#x27;《高等数学上》&#x27;</span>&#125;,<span class="string">&#x27;price&#x27;</span>,&#123;<span class="number">13.3</span>,<span class="number">28.5</span>,<span class="number">22.2</span>&#125;)</span><br><span class="line"></span><br><span class="line">book = </span><br><span class="line"></span><br><span class="line"><span class="number">1</span>x3 struct array with fields:</span><br><span class="line">    name</span><br><span class="line">    price</span><br><span class="line"></span><br><span class="line"> getfield(book,&#123;<span class="number">1</span>,<span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> = </span><br><span class="line"></span><br><span class="line">     name: <span class="string">&#x27;《法制的圆》&#x27;</span></span><br><span class="line">    price: <span class="number">13.3000</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; book = struct(<span class="string">&#x27;name&#x27;</span>,&#123;&#123;<span class="string">&#x27;《法制的圆》&#x27;</span>,<span class="string">&#x27;《今天中午吃什么》&#x27;</span>,<span class="string">&#x27;《高等数学上》&#x27;</span>&#125;&#125;,<span class="string">&#x27;price&#x27;</span>,&#123;<span class="number">13.3</span>,<span class="number">28.5</span>,<span class="number">22.2</span>&#125;)</span><br><span class="line"></span><br><span class="line">book = </span><br><span class="line"></span><br><span class="line"><span class="number">1</span>x3 struct array with fields:</span><br><span class="line">    name</span><br><span class="line">    price</span><br><span class="line"></span><br><span class="line">&gt;&gt; getfield(book,&#123;<span class="number">1</span>,<span class="number">1</span>&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> = </span><br><span class="line"></span><br><span class="line">     name: &#123;<span class="string">&#x27;《法制的圆》&#x27;</span>  <span class="string">&#x27;《今天中午吃什么》&#x27;</span>  <span class="string">&#x27;《高等数学上》&#x27;</span>&#125;</span><br><span class="line">    price: <span class="number">13.3000</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%点乘矩阵 就是对应元素之间的运算</span></span><br><span class="line">按行求和sum(A,<span class="number">2</span>)</span><br><span class="line">按行相乘prod(A,<span class="number">2</span>)</span><br><span class="line">按照行和列寻找不为零的元素</span><br><span class="line">[r,c] = <span class="built_in">find</span>(X)  <span class="comment">%X为一个矩阵 </span></span><br><span class="line"><span class="comment">%先算出所有的特征值 所对应的特征向量</span></span><br><span class="line"><span class="comment">%再用max(A(:)) 找到最大的那个元素</span></span><br><span class="line"><span class="comment">%再写判断把最大的变成1 D == max_xxx再find找到他的位置，真带劲啊</span></span><br><span class="line">[r,c] = <span class="built_in">find</span>(D == Max_eig , <span class="number">1</span>) <span class="comment">%返回前一个不为零的 元素</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220309172210168.png" alt="image-20220309172210168"></p>
-<p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220310192548644.png" alt="image-20220310192548644"></p>
-<h1 id="论文书写部分"><a href="#论文书写部分" class="headerlink" title="论文书写部分"></a>论文书写部分</h1><h2 id="代码降重及论文降重"><a href="#代码降重及论文降重" class="headerlink" title="代码降重及论文降重"></a>代码降重及论文降重</h2><p>1.加注释2.改变量名</p>
-<p>3.介绍算法的时候把变量名，汉字都塞到图片公式里面（汉字转化成图片）</p>
-<p>4.公式编辑器，修改字体和正文一样</p>
-<p>5.论文里面的代码可以用缩小字体然后改成白色，删除到pdf，打印，使其变成不能复制的样式，即转化为图片</p>
-<p>6.算法文字步骤，转化成流程图</p>
-<h2 id="三线表的绘制"><a href="#三线表的绘制" class="headerlink" title="三线表的绘制"></a>三线表的绘制</h2><p>if word :</p>
-<p>表格工具 底纹设计</p>
-<p>1.无框线-&gt;添加上下框线-.先设立框线格式0.75磅线-&gt;选中表头然后设置下框线</p>
-<p>2.先把正文居中显示ctrl+E，再到布局里面修改表格居中，最后调字体，中文宋体，英文Times new roman</p>
-<p>3.在段落里面选中 如果定义文档网格，自动调整缩进取消勾选</p>
-<p>4.表上图下（表的标题在表的上部，图的标题在图的下面）正文为宋体小四，标题比正文小一个字号</p>
-<p>5.表格布局内部使其变得美观，上下居中</p>
-<h2 id="分页符Ctrl-Enter"><a href="#分页符Ctrl-Enter" class="headerlink" title="分页符Ctrl+Enter"></a>分页符Ctrl+Enter</h2><p>分节符在操作中的作用，将文本中两端分节以后，更改单节的纸张方向 </p>
-<p>摘要部分可以改</p>
-<h2 id="作业中存在的问题"><a href="#作业中存在的问题" class="headerlink" title="作业中存在的问题"></a>作业中存在的问题</h2><p>1.每一大点之间用回车隔开</p>
-<p>2.所有表格全用三线表</p>
-<p>3.公式部分自己做</p>
-<p>4.<img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220318124434004.png" alt="image-20220318124434004"></p>
-<p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220318124556367.png" alt="image-20220318124556367"></p>
-<p>function</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
@@ -266,10 +168,9 @@
       <meta itemprop="name" content="hang">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/10/Mysql-notebook/" class="post-title-link" itemprop="url">Mysql notebook</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Mysql notebook
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -293,7 +194,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="1-1数据库系统概述"><a href="#1-1数据库系统概述" class="headerlink" title="1.1数据库系统概述"></a>1.1数据库系统概述</h1><h2 id="1-1-1数据"><a href="#1-1-1数据" class="headerlink" title="1.1.1数据"></a>1.1.1数据</h2><p>描述事物的符号</p>
+        <h1 id="1-1数据库系统概述"><a href="#1-1数据库系统概述" class="headerlink" title="1.1数据库系统概述"></a>1.1数据库系统概述</h1><h2 id="1-1-1数据"><a href="#1-1-1数据" class="headerlink" title="1.1.1数据"></a>1.1.1数据</h2><p>描述事物的符号</p>
 <h2 id="1-1-2数据库"><a href="#1-1-2数据库" class="headerlink" title="1.1.2数据库"></a>1.1.2数据库</h2><p> 1.长期储存在计算机内 2.有组织的 3.可共享的 4.大量的  数据的集合</p>
 <p>1.较小的冗余度</p>
 <p>2.较高的数据独立性（物理独立、逻辑独立）</p>
@@ -399,21 +300,30 @@
 <p> 右 表名2 right outer join 表名2 on (同上)</p>
 <p>}</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/04/10/Matlab-notebook/" rel="next" title="Matlab notebook">
+      Matlab notebook <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -466,6 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-1%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">1.1数据库系统概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-1%E6%95%B0%E6%8D%AE"><span class="nav-number">1.1.</span> <span class="nav-text">1.1.1数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-2%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">1.1.2数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-3%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88DBMS%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">1.1.3数据库管理系统（DBMS）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-4%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%EF%BC%88DBS%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">1.1.4数据库系统（DBS）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95%E9%98%B6%E6%AE%B5"><span class="nav-number">1.5.</span> <span class="nav-text">1.1.5数据库管理技术的发展阶段</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-2%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">1.2数据模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-1%E4%B8%A4%E7%B1%BB%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.</span> <span class="nav-text">1.2.1两类数据模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.概念模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B%E5%92%8C%E7%89%A9%E7%90%86%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.逻辑模型和物理模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9E%E4%BD%93-Entity"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">1.实体 (Entity)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%85%B3%E7%B3%BB-Relation"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">2.关系(Relation)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%85%83%E7%BB%84-Tuple"><span class="nav-number">2.1.2.3.</span> <span class="nav-text">3.元组(Tuple)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%B1%9E%E6%80%A7%EF%BC%88Attribute%EF%BC%89"><span class="nav-number">2.1.2.4.</span> <span class="nav-text">4.属性（Attribute）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%A0%81%E6%88%96%E9%94%AE%EF%BC%88Key%EF%BC%89"><span class="nav-number">2.1.2.5.</span> <span class="nav-text">5.码或键（Key）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.1.2.6.</span> <span class="nav-text">6.关系模式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0"><span class="nav-number">2.1.3.</span> <span class="nav-text">1.2.2数据模型组成要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-3%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.1.4.</span> <span class="nav-text">1.2.3常用数据模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-3%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">1.3数据库体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-1%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%B8%89%E7%BA%A7%E6%A8%A1%E5%BC%8F%E7%BB%93%E6%9E%84"><span class="nav-number">3.1.</span> <span class="nav-text">1.3.1数据库的三级模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-2%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BA%8C%E7%BA%A7%E6%98%A0%E5%83%8F%E5%8A%9F%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%8B%AC%E7%AB%8B%E6%80%A7"><span class="nav-number">3.2.</span> <span class="nav-text">1.3.2数据库的二级映像功能与数据独立性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C"><span class="nav-number">3.3.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2"><span class="nav-number">3.3.1.</span> <span class="nav-text">多表查询</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -20,30 +20,37 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="hang">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="矩阵123456789A &#x3D;[1 2 3 ; 4 5 6 ; 7 8 9 ]B &#x3D; A&amp;#x27;   &#x2F;&#x2F;矩阵的转置C &#x3D; A(:) &#x2F;&#x2F;D &#x3D; inv(A) &#x2F;&#x2F;矩阵的逆   定义与构造 123B &#x3D; 1:2:9C &#x3D; repmat(B,3,1)D &#x3D; ones(2,4)      三维矩阵创建E &#x3D; zeors(:,:,3) 随机数 rand、randi、randn1.rand">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab notebook">
+<meta property="og:url" content="http://example.com/2022/04/10/Matlab-notebook/index.html">
 <meta property="og:site_name" content="hang">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="矩阵123456789A &#x3D;[1 2 3 ; 4 5 6 ; 7 8 9 ]B &#x3D; A&amp;#x27;   &#x2F;&#x2F;矩阵的转置C &#x3D; A(:) &#x2F;&#x2F;D &#x3D; inv(A) &#x2F;&#x2F;矩阵的逆   定义与构造 123B &#x3D; 1:2:9C &#x3D; repmat(B,3,1)D &#x3D; ones(2,4)      三维矩阵创建E &#x3D; zeors(:,:,3) 随机数 rand、randi、randn1.rand">
 <meta property="og:locale">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220309172210168.png">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220310192548644.png">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220318124434004.png">
+<meta property="og:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220318124556367.png">
+<meta property="article:published_time" content="2022-04-10T14:59:46.000Z">
+<meta property="article:modified_time" content="2022-04-10T15:00:02.236Z">
 <meta property="article:author" content="Lv Shuhang">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/hang/AppData/Roaming/Typora/typora-user-images/image-20220309172210168.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/04/10/Matlab-notebook/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'cn'
   };
 </script>
 
-  <title>hang</title>
+  <title>Matlab notebook | hang</title>
   
 
 
@@ -143,9 +150,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
@@ -161,10 +169,9 @@
       <meta itemprop="name" content="hang">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/10/Matlab-notebook/" class="post-title-link" itemprop="url">Matlab notebook</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Matlab notebook
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -188,7 +195,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A =[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> ; <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> ; <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> ]</span><br><span class="line"></span><br><span class="line">B = A&#x27;   //矩阵的转置</span><br><span class="line"></span><br><span class="line">C = A(:) //</span><br><span class="line"></span><br><span class="line">D = inv(A) //矩阵的逆 </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A =[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span> ; <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> ; <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> ]</span><br><span class="line"></span><br><span class="line">B = A&#x27;   //矩阵的转置</span><br><span class="line"></span><br><span class="line">C = A(:) //</span><br><span class="line"></span><br><span class="line">D = inv(A) //矩阵的逆 </span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>定义与构造</p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">B = <span class="number">1</span>:<span class="number">2</span>:<span class="number">9</span></span><br><span class="line">C = <span class="built_in">repmat</span>(B,<span class="number">3</span>,<span class="number">1</span>)</span><br><span class="line">D = <span class="built_in">ones</span>(<span class="number">2</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
@@ -236,184 +243,30 @@
 <p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220318124556367.png" alt="image-20220318124556367"></p>
 <p>function</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="cn">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/10/Mysql-notebook/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Lv Shuhang">
-      <meta itemprop="description" content="个人博客">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="hang">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/10/Mysql-notebook/" class="post-title-link" itemprop="url">Mysql notebook</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2022-04-10 22:58:14 / Modified: 22:59:09" itemprop="dateCreated datePublished" datetime="2022-04-10T22:58:14+08:00">2022-04-10</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-1数据库系统概述"><a href="#1-1数据库系统概述" class="headerlink" title="1.1数据库系统概述"></a>1.1数据库系统概述</h1><h2 id="1-1-1数据"><a href="#1-1-1数据" class="headerlink" title="1.1.1数据"></a>1.1.1数据</h2><p>描述事物的符号</p>
-<h2 id="1-1-2数据库"><a href="#1-1-2数据库" class="headerlink" title="1.1.2数据库"></a>1.1.2数据库</h2><p> 1.长期储存在计算机内 2.有组织的 3.可共享的 4.大量的  数据的集合</p>
-<p>1.较小的冗余度</p>
-<p>2.较高的数据独立性（物理独立、逻辑独立）</p>
-<p>3.易扩展性</p>
-<p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220227193839810.png" alt="image-20220227193839810"></p>
-<h2 id="1-1-3数据库管理系统（DBMS）"><a href="#1-1-3数据库管理系统（DBMS）" class="headerlink" title="1.1.3数据库管理系统（DBMS）"></a>1.1.3数据库管理系统（DBMS）</h2><p>功能：P6</p>
-<p>1.数据定义功能(DDL)</p>
-<p>2.数据操纵功能(DML) “增删改查’’</p>
-<p>3.数据控制 (DCL)功能&#x2F;&#x2F;前三点考</p>
-<p>4.数据组织、存储和管理 &#x2F;&#x2F;数据库维护</p>
-<h2 id="1-1-4数据库系统（DBS）"><a href="#1-1-4数据库系统（DBS）" class="headerlink" title="1.1.4数据库系统（DBS）"></a>1.1.4数据库系统（DBS）</h2><p>由数据库、数据库管理系统、应用程序和数据库管理员组成的存储、管理处理和维护数据的系统</p>
-<h2 id="1-1-5数据库管理技术的发展阶段"><a href="#1-1-5数据库管理技术的发展阶段" class="headerlink" title="1.1.5数据库管理技术的发展阶段"></a>1.1.5数据库管理技术的发展阶段</h2><p>1.人工管理阶段 硬件：没有存储设备 软件：没有操作系统  共享性 结构化</p>
-<p>2.文件管理系统阶段  硬件：磁盘、磁鼓 软件：文件系统 ··· ···</p>
-<p>3.数据库系统 阶段  ···  ···</p>
-<p>特性：ABCD哪些不是  阶段的特性</p>
-<p>数据库系统结构</p>
-<p>并发处理</p>
-<p>数据库的恢复</p>
-<p>数据库用户</p>
-<h1 id="1-2数据模型"><a href="#1-2数据模型" class="headerlink" title="1.2数据模型"></a>1.2数据模型</h1><p>对数据特征的抽象</p>
-<h2 id="1-2-1两类数据模型"><a href="#1-2-1两类数据模型" class="headerlink" title="1.2.1两类数据模型"></a>1.2.1两类数据模型</h2><h3 id="1-概念模型"><a href="#1-概念模型" class="headerlink" title="1.概念模型"></a>1.概念模型</h3><p>实体-联系图 E-R模型</p>
-<p>在ER图中有如下四个成分：</p>
-<p>矩形框：表示实体，在框中记入实体名。</p>
-<p><a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%8F%B1%E5%BD%A2">菱形</a>框：表示联系，在框中记入联系名。</p>
-<p>椭圆形框：表示实体或联系的属性，将属性名记入框中。对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E4%B8%BB%E5%B1%9E%E6%80%A7">主属性</a>名，则在其名称下划一下划线。</p>
-<p>连线：实体与属性之间；实体与联系之间；联系与属性之间用直线相连，并在直线上标注联系的类型。（对于一对一联系，要在两个实体连线方向各写1； 对于一对多联系，要在一的一方写1，多的一方写N；对于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%A4%9A%E5%AF%B9%E5%A4%9A%E5%85%B3%E7%B3%BB/665737">多对多关系</a>，则要在两个实体连线方向各写N,M。</p>
-<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg-blog.csdnimg.cn%2F20210425091641169.png%3Fx-oss-process%3Dimage%2Fwatermark%2Ctype_ZmFuZ3poZW5naGVpdGk%2Cshadow_10%2Ctext_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1lJTlpIRV9f%2Csize_16%2Ccolor_FFFFFF%2Ct_70&refer=http%3A%2F%2Fimg-blog.csdnimg.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1648708245&t=7b31d49bc98be65a794de1b6d8a34b09" alt="img"> </p>
-<h3 id="2-逻辑模型和物理模型"><a href="#2-逻辑模型和物理模型" class="headerlink" title="2.逻辑模型和物理模型"></a>2.逻辑模型和物理模型</h3><h4 id="1-实体-Entity"><a href="#1-实体-Entity" class="headerlink" title="1.实体 (Entity)"></a>1.实体 (Entity)</h4><p>实体是实现现实世界或客观世界中可以相互区别的对象，这种对象可以是具体的，也可以是抽象的。</p>
-<h4 id="2-关系-Relation"><a href="#2-关系-Relation" class="headerlink" title="2.关系(Relation)"></a>2.关系(Relation)</h4><p>一张规范的二维表</p>
-<h4 id="3-元组-Tuple"><a href="#3-元组-Tuple" class="headerlink" title="3.元组(Tuple)"></a>3.元组(Tuple)</h4><p>一条记录，一行即为一个元组</p>
-<h4 id="4-属性（Attribute）"><a href="#4-属性（Attribute）" class="headerlink" title="4.属性（Attribute）"></a>4.属性（Attribute）</h4><p>表中的一列即为一个属性，又叫数据项。</p>
-<h4 id="5-码或键（Key）"><a href="#5-码或键（Key）" class="headerlink" title="5.码或键（Key）"></a>5.码或键（Key）</h4><p>关键码或关键字。表中某个属性或属性的组合</p>
-<h4 id="6-关系模式"><a href="#6-关系模式" class="headerlink" title="6.关系模式"></a>6.关系模式</h4><p>关系名（属性1，属性2，属性3，……，属性n）</p>
-<h3 id="1-2-2数据模型组成要素"><a href="#1-2-2数据模型组成要素" class="headerlink" title="1.2.2数据模型组成要素"></a>1.2.2数据模型组成要素</h3><p> 1.数据结构</p>
-<p>2.数据操作</p>
-<p>3.数据约束条件：实体完整性（行的唯一）、参照完整性（两个表（关系）多表统一）、用户定义完整性（某些列的取值限定）。</p>
-<p>​    </p>
-<h3 id="1-2-3常用数据模型"><a href="#1-2-3常用数据模型" class="headerlink" title="1.2.3常用数据模型"></a>1.2.3常用数据模型</h3><p>层次模型、网状模型、关系模型……</p>
-<h1 id="1-3数据库体系结构"><a href="#1-3数据库体系结构" class="headerlink" title="1.3数据库体系结构"></a>1.3数据库体系结构</h1><h2 id="1-3-1数据库的三级模式结构"><a href="#1-3-1数据库的三级模式结构" class="headerlink" title="1.3.1数据库的三级模式结构"></a>1.3.1数据库的三级模式结构</h2><p>1.模式</p>
-<p>逻辑模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图</p>
-<p>2.外模式</p>
-<p>也称子模式或用户模式，数据库用户的数据视图</p>
-<p>3.内模式</p>
-<p>物理结构和存储方式的描述    </p>
-<h2 id="1-3-2数据库的二级映像功能与数据独立性"><a href="#1-3-2数据库的二级映像功能与数据独立性" class="headerlink" title="1.3.2数据库的二级映像功能与数据独立性"></a>1.3.2数据库的二级映像功能与数据独立性</h2><p>1.外模式&#x2F;模式映像  </p>
-<p>​                外模式</p>
-<p>外&#x2F;模映像—&gt;逻辑独立性</p>
-<p>​                模式  </p>
-<p>2.模式&#x2F;内模式映像</p>
-<p>模式&#x2F;内模式—-&gt;物理独立性</p>
-<p>​                    内模式</p>
-<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create database 数据库名称;</span><br><span class="line">drop database 数据库名称;</span><br><span class="line">7.create table 表名(&lt;属性名 数据类型 [约束条件]&gt;[&lt;属性名&gt; 数据类型  [约束条件]])</span><br><span class="line">//看表show tables;</span><br><span class="line"></span><br><span class="line">8. desc 表名;//查看表的结构</span><br></pre></td></tr></table></figure>
-
-<p>约束条件:{</p>
-<p>a.实体完整性 primary key ，列的约束primary key(属性名1,属性名2)。</p>
-<p>b.参照完整性 : foreign key   属性名 references 表名(属性名)     外键，取值范围受到另外一个值的约束       (Cpon) references Caurse(Cno)</p>
-<p>c.自定义完整性{ not null ,unique,check ……}</p>
-<p>}</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO &lt;表名&gt;[&lt;属性1&gt;,&lt;属性2&gt;] Values(&lt;常量1&gt;,&lt;常量2&gt;)     //插入</span><br></pre></td></tr></table></figure>
-
-<p>2、数据修改操作</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 属性=表达式 where 条件表达式;  &lt;&gt;,必须存在 []可选</span><br></pre></td></tr></table></figure>
-
-<p>3、DDL修改：alter</p>
-<p>表的修改</p>
-<p>alter table 表名 rename 新名;</p>
-<p>属性的添加:</p>
-<p>alter table 表名 add 属性名 数据类型 [first&#x2F;after]; </p>
-<p>属性名的修改:</p>
-<p>alter table 表名 change  xx 为 xx数据类型 [first&#x2F;after];</p>
-<p>属性的数据类型的修改:</p>
-<p>alter table 表名 modify 属性名 数据类型;</p>
-<p>属性的删除:</p>
-<p>alter table 表名 drop 属性名;</p>
-<p>4、DML</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">删 delete from 表名 Where 条件表达式;</span><br><span class="line"></span><br><span class="line">查询 select 别名 from 关系名; </span><br><span class="line">select *|别名|列明表达式 from 基本表|视图|查询的结果 </span><br><span class="line">[where] 条件表达式</span><br><span class="line">[group by&lt;属性名&gt;] </span><br><span class="line">[having 条件表达式]</span><br><span class="line">[order by&lt;列名&gt; [asc/desc]]</span><br><span class="line">SELECT  name  FROM  test</span><br><span class="line">GROUP  BY  name</span><br><span class="line">可以用select 只是展示结果的返回，</span><br><span class="line">ps: select sname,&#x27;year of birth &#x27;,2022-sage year,upper(sdept) DEPT from student;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="C:\Users\hang\AppData\Roaming\Typora\typora-user-images\image-20220322142925814.png" alt="image-20220322142925814"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">where 条件表达式 6种类型</span><br></pre></td></tr></table></figure>
-
-<p>1.比较运算</p>
-<p>2.多重条件（逻辑运算）</p>
-<p>not and or</p>
-<p>3.确定范围</p>
-<p>between and</p>
-<p>not between and</p>
-<p>4.确定集合</p>
-<p>in ;</p>
-<p>not in </p>
-<p>5.字符匹配</p>
-<p>like ,not like{</p>
-<p>_单个字符一个字符长度</p>
-<p>%任意长度</p>
-<p>}</p>
-<p>6.空值处理</p>
-<p>is null,is not null  不能用等号来做</p>
-<p>分组查询group by&lt;列名&gt;[having 条件表达式]</p>
-<p>区别{ where  having }1、处理对象不同2、</p>
-<h3 id="多表查询"><a href="#多表查询" class="headerlink" title="多表查询"></a>多表查询</h3><p>外键</p>
-<p>外连接{</p>
-<p>全 表名1 outer join 表名2 别名 on 连接条件   (mysql 不支持 oracle、sqlserver支持)</p>
-<p> 左 表名1 left outer join 表名2 join 表名2 on (同上)</p>
-<p> 右 表名2 right outer join 表名2 on (同上)</p>
-<p>}</p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/04/10/Mysql-notebook/" rel="prev" title="Mysql notebook">
+      <i class="fa fa-chevron-left"></i> Mysql notebook
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -466,6 +319,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5"><span class="nav-number">1.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E6%95%B0-rand%E3%80%81randi%E3%80%81randn"><span class="nav-number">2.</span> <span class="nav-text">随机数 rand、randi、randn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E8%83%9E%E6%95%B0%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">元胞数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%BA%E6%96%87%E4%B9%A6%E5%86%99%E9%83%A8%E5%88%86"><span class="nav-number"></span> <span class="nav-text">论文书写部分</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E9%99%8D%E9%87%8D%E5%8F%8A%E8%AE%BA%E6%96%87%E9%99%8D%E9%87%8D"><span class="nav-number"></span> <span class="nav-text">代码降重及论文降重</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E7%BA%BF%E8%A1%A8%E7%9A%84%E7%BB%98%E5%88%B6"><span class="nav-number"></span> <span class="nav-text">三线表的绘制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E9%A1%B5%E7%AC%A6Ctrl-Enter"><span class="nav-number"></span> <span class="nav-text">分页符Ctrl+Enter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%AD%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number"></span> <span class="nav-text">作业中存在的问题</span></a></div>
       </div>
       <!--/noindex-->
 
